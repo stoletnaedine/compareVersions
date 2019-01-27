@@ -1,14 +1,14 @@
 public class Main {
 
 	public static void main(String[] args) {
-		show("Ok, let's check new version!");
+		show("Ok, let's define the old version!");
 		show("Version 1: " + VERSION_ONE);
 		show("Version 2: " + VERSION_TWO);
 		compareVersion(VERS_ONE, VERS_TWO);
 		}
 
-	private static String VERSION_ONE = "8.000012.22.1312312";
-	private static String VERSION_TWO = "8.012.00022.1123121";
+	private static String VERSION_ONE = "8.1.13.41";
+	private static String VERSION_TWO = "8.1.009.125";
 	private static String VERS_ONE = VERSION_ONE + ".";
 	private static String VERS_TWO = VERSION_TWO + ".";
 
@@ -19,13 +19,13 @@ public class Main {
 			show(v1 + " = " + v2 + " and check next num ↓");
 			compareVersion(otherNum(VERS_ONE), otherNum(VERS_TWO));
 		}
-		else if (v1 > v2) {
-			show(v1 + ">" + v2);
-			show("Version N1: " + VERSION_ONE + " is new.");
-		}
 		else if (v1 < v2) {
-			show(v1 + "<" + v2);
-			show("Version N2: " + VERSION_TWO + " is new.");
+			show(v1 + " < " + v2);
+			show("Version N1 (" + VERSION_ONE + ") is old.");
+		}
+		else if (v1 > v2) {
+			show(v1 + " > " + v2);
+			show("Version N2 (" + VERSION_TWO + ") is old.");
 		}
 	}
 
