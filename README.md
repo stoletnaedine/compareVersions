@@ -11,11 +11,10 @@ Compare versions
 
 Решение реализовано на языке JAVA.
 Итогом является вывод в консоль следующих строк:
-
-Ok, let's define the old version!
 Version 1: 8.1.13.41
 Version 2: 8.1.009.125
-8 = 8 and check next num ↓
-1 = 1 and check next num ↓
+Ok, let's define the old version!
+8 = 8 check next num ↓
+1 = 1 check next num ↓
 13 > 9
 Version N2 (8.1.009.125) is old.
