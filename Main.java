@@ -45,5 +45,5 @@ public class Main {
 	private static void show(String result) {
 		System.out.println(result);
 	}
-
+	
 }
