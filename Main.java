@@ -11,39 +11,28 @@ public class Main {
 	private static String VERS_TWO = "8.1.009.125";
 
 	public static void compareVersion(String VERS_ONE, String VERS_TWO) {
-		int[] v1 = strToInt(split(VERS_ONE));
-		int[] v2 = strToInt(split(VERS_TWO));
+		String[] v1 = VERS_ONE.split("\\.");
+		String[] v2 = VERS_TWO.split("\\.");
 		for (int i = 0; i < 4; i++) {
-			if (v1[i] == v2[i]) {
+			if (Integer.parseInt(v1[i]) == Integer.parseInt(v2[i])) {
 				show(v1[i] + " = " + v2[i] + " check next num ↓");
 				continue;
 			}
-			if (v1[i] < v2[i]) {
+			else if (Integer.parseInt(v1[i]) < Integer.parseInt(v2[i])) {
 				show(v1[i] + " < " + v2[i]);
 				show("Version N1 (" + VERS_ONE + ") is old.");
 				break;
 			}
-				show(v1[i] + " > " + v2[i]);
+			else {
+				show(Integer.parseInt(v1[i]) + " > " + Integer.parseInt(v2[i]));
 				show("Version N2 (" + VERS_TWO + ") is old.");
 				break;
+			}
 		}
-	}
-
-	private static String[] split(String version) {
-		String[] splitVers = version.split("\\.");
-		return splitVers;
-	}
-
-	private static int[] strToInt(String[] strArr) {
-		int[] intArr = new int[strArr.length];
-		for (int i = 0; i < strArr.length; i++) {
-			intArr[i] = Integer.parseInt(strArr[i]);
-		}
-		return intArr;
 	}
 
 	private static void show(String result) {
 		System.out.println(result);
 	}
-	
+
 }
