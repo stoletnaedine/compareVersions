@@ -16,17 +16,16 @@ public class Main {
 		for (int i = 0; i < 4; i++) {
 			if (v1[i] == v2[i]) {
 				show(v1[i] + " = " + v2[i] + " check next num ↓");
+				continue;
 			}
-			else if (v1[i] < v2[i]) {
+			if (v1[i] < v2[i]) {
 				show(v1[i] + " < " + v2[i]);
 				show("Version N1 (" + VERS_ONE + ") is old.");
 				break;
 			}
-			else if (v1[i] > v2[i]) {
 				show(v1[i] + " > " + v2[i]);
 				show("Version N2 (" + VERS_TWO + ") is old.");
 				break;
-			}
 		}
 	}
 
